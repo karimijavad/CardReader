@@ -1,0 +1,23 @@
+<templates>
+    <template name="template_card_1">
+        <XLeft>21</XLeft>
+        <XRight>338</XRight>
+        <YTop>365</YTop>
+        <YBottom>420</YBottom>
+        <CharactersLength>10,11</CharactersLength>
+    </template>
+    <template name="template_card_2">
+        <XLeft>775</XLeft>
+        <XRight>1004</XRight>
+        <YTop>430</YTop>
+        <YBottom>472</YBottom>
+        <CharactersLength>10,11</CharactersLength>
+    </template>
+    <template name="template_card_3">
+        <XLeft>160</XLeft>
+        <XRight>585</XRight>
+        <YTop>375</YTop>
+        <YBottom>430</YBottom>
+        <CharactersLength>17</CharactersLength>
+    </template>
+</templates>

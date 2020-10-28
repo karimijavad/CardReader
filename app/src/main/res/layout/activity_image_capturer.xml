@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="270dp"
+        android:layout_weight="3"></ImageView>
+
+    <ImageView
+        android:id="@+id/serialNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"></ImageView>
+
+    <TextView
+        android:id="@+id/textViewEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:lines="2"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:text="Serial Number English"
+        android:textAlignment="center"
+        android:textDirection="rtl" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Capture"></Button>
+
+
+</LinearLayout>
