@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -180,10 +181,12 @@ public class CardReader extends AppCompatActivity {
 
         //If OpenCV Has Been Configured Properly, Then Continue Executing The Code
         if (OpenCVLoader.initDebug()) {
-            Toast.makeText(this, "OpenCV Is Configured or Connected Successfully.", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "OpenCV Is Configured or Connected Successfully.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "کتابخانه‌های اپلیکیشن به‌درستی بارگذاری شدند.", Toast.LENGTH_SHORT).show();
             baseLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         } else {
-            Toast.makeText(this, "OpenCV Not Working Or Loaded.", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "OpenCV Not Working Or Loaded.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "خطا در بارگذاری کتابخانه‌های اپلیکیشن.", Toast.LENGTH_SHORT).show();
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION, this, baseLoaderCallback);
         }
     }
@@ -513,7 +516,7 @@ public class CardReader extends AppCompatActivity {
                 Utils.matToBitmap(extractedText.alignedImage.image, alignedImageBitmap);
                 this.imageView.setImageBitmap(alignedImageBitmap);
                 this.serialNumberView.setImageBitmap(extractedText.alignedImage.serialNumberBitmap);
-                this.textViewEnglish.setText(extractedText.text);
+                this.textViewEnglish.setText("شماره کارت: " + extractedText.text);
             } else {
                 this.imageView.setImageBitmap(cameraImageBitmap);
                 this.serialNumberView.setImageBitmap(null);
