@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Naji Card Reader</string>
+    <string name="app_name">کارت‌خوان ناجی</string>
+    <string name="serial_number_english">شماره سریال انگلیسی</string>
+    <string name="capture">دوربین</string>
 </resources>

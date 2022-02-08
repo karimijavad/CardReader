@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -128,7 +129,7 @@ public class CardReader extends AppCompatActivity {
     /**
      * Called After OpenCV Initialization is Successful
      */
-    private BaseLoaderCallback baseLoaderCallback = new BaseLoaderCallback(this) {
+    private final BaseLoaderCallback baseLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
             if (status == LoaderCallbackInterface.SUCCESS) {
@@ -191,6 +192,7 @@ public class CardReader extends AppCompatActivity {
      * Initializes The UI!
      */
     public void initializeUI() {
+        getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         setContentView(R.layout.activity_image_capturer);
         captureImageButton = this.findViewById(R.id.button);
         imageView = findViewById(R.id.imageView);
